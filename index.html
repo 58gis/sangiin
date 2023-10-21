@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--R5/10/21 16:00-->
+<!--05参議院入閣.html-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参議院は入閣に不利？</title>
+    <style>
+        html {
+            background-color: #fff;
+            color: #333;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        h1, h2, h3, p {
+            margin-top: 20px;
+        }
+            h1{
+                position: relative;
+                font-size: 2em;
+                line-height: 1.2em;
+                letter-spacing: .055em;
+                text-align: center;
+                margin: 32px auto 0;
+                width: fit-content;
+            }
+
+            h2{
+                text-align: justify;
+                margin-block-start: 2em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                text-align: center;
+            }
+
+            p {
+                display: block;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+            }
+
+        .wrapper *, .wrapper *::before, .wrapper *::after {
+            box-sizing: border-box;
+        }
+        #date{
+            box-sizing: content-box;
+            margin: 0 0 0 auto;
+            text-align: right;
+            font-size: 15px; 
+        }
+
+        .wrapper {
+            min-height: 100vh;
+            -webkit-text-size-adjust: 100%;
+            font-family: "Source Han Sans",sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -webkit-font-feature-settings: "palt";
+            font-feature-settings: "palt";
+            font-size: 15px;
+            letter-spacing: 0em;
+            line-height: 2;
+        }        
+            @media(min-width: 36em){.wrapper{
+                font-size:17px;line-height:2}}
+            @media(min-width: 80em){.wrapper{
+                font-size:19px;line-height:2;line-height:2}}
+            @media(min-width: 120em){.wrapper{
+                font-size:21px;line-height:2;line-height:2}}
+            @media screen and (max-width: 23em){.wrapper{
+                font-size:14px}}
+        .wrapper {
+            background: #fff;
+            color: #000;
+        }
+
+
+        .heading {
+            position: relative;
+            width: 100%;
+            color: #fff;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            font-size: 18px;
+        }
+        @media (min-width: 23em){
+            .heading {
+            padding-right: 0;
+            padding-left: 0;
+        }}
+        @media (min-width: 60em){
+            .heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+            height: calc(100vh - 48px);
+            overflow: hidden;
+        }}
+
+        .heading_image {
+            width: 100%;
+            height: 100vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: inline-block;
+        }
+        @media (min-width: 48em){
+            .heading_image {
+            width: 100%;
+            height: 70vw;
+        }}
+        @media (min-width: 60em){
+            .heading_image {
+            flex: 0 1 50%;
+            width: 50%;
+            height: 100%;
+        }}
+        .heading_paragraph {
+            max-width: 34em;
+            padding: 2em 1em;
+            margin: 0 auto;
+            color: #000;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        @media (min-width: 36em){
+            .heading_paragraph {
+                padding: 2em;
+        }}
+        @media (min-width: 60em){
+            .heading_paragraph {
+                flex: 0 1 50%;
+                max-width: 25em;
+                display: flex;
+                flex-direction: column;
+                max-height: 100%;
+        }}
+        @media(min-width: 80em){
+            .heading_paragraph{
+                max-width:28em;padding:2.25em
+        }}
+        /*.tilte{
+        } →h1へ*/
+        @media (min-width: 36em){
+            .title{
+            font-size: 2em;
+        }}
+        @media (min-width: 60em){
+            .title{
+            line-height: 1.5em;
+        }}
+        .subtitle {
+            font-size: 1.6em;
+            text-align: center;
+            margin: 32px auto 0;
+            line-height: 1.4em;
+            width: fit-content;
+        }
+        @media (min-width: 36em){
+            .sub-title {
+            font-size: 1.5em;
+        }}
+        @media (min-width: 60em){
+            .sub-title {
+            line-height: 1.5em;
+        }}
+        .lead-paragraph{
+            letter-spacing: 0em;
+            line-height: 2;
+            margin: 1em auto 0;
+            text-align: justify;
+            z-index: 0;
+        }
+
+
+
+        /*以下、本体部分*/
+        .content { 
+            z-index: 0;
+            margin: 4em auto 2em;
+        }
+        .t-paragraph{
+            width: 100%;
+            padding: 0 1em;
+            text-align: justify;
+            margin: 1em auto 0;
+            max-width: calc(30em + 2em * 2);
+        }
+
+        .graph-section {
+            position: relative;
+            width: 100%;
+            padding-right: 1em;
+            padding-left: 1em;
+            max-width: 49em;
+            margin: 1em auto;
+        }
+        @media (min-width: 23.5em){
+            .graph-section{
+                padding-right: 1em;
+                padding-left: 1em;
+        }}
+
+        /*以下、グラフ動作部分*/
+        .sticky-container {
+            position: relative;
+        }
+        .flourish-undermove {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            z-index: 1;
+        }
+        .sticky-text {
+            position: relative;
+            background-color: white;
+            height: 200%;
+            z-index: 2;
+        }
+        .final-spacer {
+            height: 100vh;
+        }
+
+        /*以下、グラフ上の文章の体裁*/
+        .sticky-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+            pointer-events: auto;
+            text-align: justify;
+            flex: 1 1 18em;
+            max-width: 30em;
+            margin: 0 auto;
+            padding: 2em 1em;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 16px 0;
+            width: 100%;
+        }
+        @media (min-width: 60em){
+            .sticky-text{
+            max-width: calc(39em);
+            padding-left: 2em;
+            padding-right: 2em;
+        }}
+        .sticky-text {
+            padding-bottom: 1.5em;
+        }
+
+        /*以下、末尾の出典等*/
+        .the_source {
+            text-align: justify;
+            margin: 6em auto;
+            width: fit-content;
+            font-size: 10px;
+        }
+            @media(min-width: 36.25em){
+                .the_source{
+                    font-size: 12.25px;
+            }}
+            @media (min-width: 80em){
+                .the_source{
+                    font-size: 14.5px;
+            }}
+
+    </style>
+</head>
+<body>
+    <article class="wrapper">
+        <section class="heading">
+            <img class="heading_image" src="https://2.bp.blogspot.com/-UxbAnJzGsgs/UdoBWVQhgAI/AAAAAAAAV9I/qC1HqrDE0uw/s800/nejirekokkai.png" alt="Image Description">
+            <div class="heading_paragraph">
+                <h1 class="title">参議院は<br>入閣に不利？</h1>
+                <h3 class="subtitle">ポスト55年体制下の内閣で比較</h3>
+                <p id="date">2023年10月15日16:30</p>
+                <p class="lead-paragraph">2023年9月13日、第2次岸田第2次改造内閣が誕生した。岸田首相の盟友である林芳正氏は重要閣僚を降り閣外へと移った。そんな林氏は参議院からの鞍替え組だ。閣僚人事の背後には、参議院議員が内閣入りするための壁が見え隠れする。</p>
+            </div>
+        </section>
+
+        <!-- 本文 -->
+        <section class="content">
+            <h2>参議院より衆議院</h2>
+            <p class="t-paragraph">「やっぱり総理になるなら衆議院じゃないと」。自民党の議員のインターンをしている21歳の男性はこう語った。日本国憲法の67条1項には、総理大臣は国会議員であることが明記されており、理論上、参議院議員も総理大臣になる資格を持っている。とはいえ、実際には片山内閣（1947年-1948年）以降、総理大臣に選ばれるのは衆議院議員ばかりだ。</p>
+            <div class="flourish-embed flourish-cards graph-section" data-src="visualisation/15433671">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+            <p class="t-paragraph">「解散の影響を受けない参議院議員が、解散権を持つ総理の座に就かない。それはある種の不文律ともいえる」と、男性は続けた。「そのため、総理を目指すのであれば衆議院からの出馬が一般的であり、閣僚ポストも主に衆議院議員から選ばれる傾向にある」。</p>
+            
+            <h2>入閣すら難しい参議院議員</h2>
+            <p class="t-paragraph">自民党内の参議院議員の割合を考慮すると、閣内の参議院議員の割合は常にそれを下回っていることが確認される。特に、森内閣や小泉内閣の初期には、参議院議員の党内割合が三割を超えていたにもかかわらず、閣内のその割合は僅か一割に留まっていた。</p>
+            <div class="sticky-container">
+                <div class="flourish-embed flourish-chart flourish-undermove graph-section" data-src="visualisation/15355767">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                </div>
+                <div class="sticky-text">
+                    <p class="t-paragraph">一方、第一次安倍内閣から麻生内閣までの期間では、議員の割合と閣内の参議院議員の入閣割合がほぼ同じであった。しかし、この期間中、自民党は結党以来初めて参議院での最大会派の地位を民主党に明け渡するなど、参議院議員たちにとっては厳しい「冬の時代」ともいえる時期であった。</p>
+                </div>
+                <div class="final-spacer"></div>
+            </div>
+
+            <h2>再入閣も極めて難関</h2>
+            <p class="t-paragraph">各内閣での再入閣者数を衆議院と参議院の議員別に見ると、再入閣する議員の大半が衆議院議員であることが明らかになる。一般的に「有力議員」や「総理・総裁候補」と見なされる議員のほとんどは衆議院から選出され、参議院議員がその地位に就くことは稀である。</p>
+            <div class="sticky-container">
+                <div class="flourish-embed flourish-chart flourish-undermove graph-section" data-src="visualisation/15355790">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                </div>
+                <div class="sticky-text">
+                    <p class="t-paragraph">第3次安倍第2次改造内閣以降で再入閣を果たした参議院議員には、丸川珠代氏、林芳正氏、世耕弘成氏、橋本聖子氏が名を連ねる。しかしこの中で、衆議院へ転職した林氏を除けば、他の参議院議員は再入閣の機会を得ていない。岸田内閣においては、衆議院議員の再入閣組は組閣・改造時に8人前後いる中、参議院からの再入閣者は一人もいない。</p>
+                </div>
+                <div class="final-spacer"></div>
+            </div>
+
+            <h2>抜擢人事も衆議院中心</h2>
+            <p class="t-paragraph">抜擢される閣僚の大部分は衆議院議員から選出されるのが一般的である。小泉首相の時代、首相の権限が強化された背景において多くの抜擢人事が行われたが、そのほとんどは衆議院議員だった。安倍首相のリーダーシップ下でも、抜擢される議員は主に衆議院からであり、参議院議員の抜擢は非常に限られていた。小泉内閣以降で多くの抜擢人事を行っている岸田内閣も、この傾向を踏襲しており、大半の抜擢人事は衆議院議員からである。</p>
+            <div class="sticky-container">
+                <div class="flourish-embed flourish-chart flourish-undermove graph-section" data-src="visualisation/15345826">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                </div>
+            </div>
+
+            <h2>参議院議員の入閣属性に変化が？</h2>
+            <p class="t-paragraph">各内閣の初入閣議員の平均当選回数を衆参別に見ると、過去の参議院議員は衆議院議員と比較して、少ない当選回数で入閣していたことが確認される。しかし、第2次安倍政権以降、参議院議員の平均当選回数は増加傾向にある。これは、参議院議員が閣僚として選ばれる“ハードル”が従来よりも高くなっていると解釈できる。</p>
+            <div class="sticky-container">
+                <div class="flourish-embed flourish-chart flourish-undermove graph-section" data-src="visualisation/15355797">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                </div>
+                <div class="sticky-text">
+                    <p class="t-paragraph">特に第4次安倍第2次改造内閣から、参議院議員の平均当選回数が衆議院議員のそれを、小泉内閣以来初めて上回った。小泉内閣の時代には、多くの衆議院議員が初入閣したため平均当選回数が低下したとされるが、安倍内閣の期間中には大幅な抜擢は行われていない。この結果、参議院議員が入閣するための当選回数のハードルが、衆議院議員と比較して一層高くなっていることが伺える。</p>
+                </div>
+                <div class="final-spacer"></div>
+            </div>
+
+            <p class="t-paragraph">参議院議員が閣僚として選ばれるハードルは高いことが伺える。今後、政治の中心となる首相や党首が、参議院からの登用を増やしていくのか、注目される。</p>
+        
+            <p class="t-paragraph">
+                <p class="the_source">
+                    <b>文責</b>
+                    <br>@58gis
+                    <br>
+                    <br>
+                    <b>参考記事・文献</b>
+                    <br>日本経済新聞社「『酔わない晩酌』定番に」
+                    <br>衆議院公報
+                    <br>参議院公報
+                    <br>日本経済新聞
+                    <br>国会便覧
+                    <br>自由民主党(2006)「自由民主党五十年史　資料編」
+                    <br>佐藤誠三郎・松崎哲久(1989)「自民党政権」
+                    <br>
+                    <br>
+                    <b>画像</b>
+                    <br><a href="https://www.irasutoya.com/2013/07/blog-post_7131.html">イラストや</a>
+                    <br><a href="https://www.kantei.go.jp/jp/rekidainaikaku/index.html">首相官邸</a>
+                </p>
+            </p>
+            <p class="t-paragraph">
+                <a href="https://58gis.github.io/page_home/">他の記事へのリンク</a>
+                <br><br><br><br><br><br><br><br>
+            </p>
+        </section>
+
+        <!--終わり-->
+    </article>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const graphSection = document.querySelector('.graph-section');
+            const graphOverlay = document.querySelector('.graph-overlay');
+            const graphTop = graphSection.getBoundingClientRect().top;
+
+            if (graphTop <= 0) {
+                graphOverlay.style.position = 'fixed';
+                graphOverlay.style.top = '0';
+            } else {
+                graphOverlay.style.position = 'absolute';
+                graphOverlay.style.top = '100%';
+            }
+
+            if (graphOverlay.getBoundingClientRect().bottom <= 0) {
+                graphOverlay.style.position = 'absolute';
+                graphOverlay.style.top = '-100%';
+            }
+        });
+    </script>
+</body>
+</html>
